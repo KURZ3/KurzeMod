@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "sculk",
+  "ingredient": {
+    "item": "kurzemod:sculk_unrefined_ingot"
+  },
+  "result": "kurzemod:sculk_ingot"
+}

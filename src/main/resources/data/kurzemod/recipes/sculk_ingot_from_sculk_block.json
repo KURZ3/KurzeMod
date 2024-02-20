@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients":
+  [
+    {
+      "item": "kurzemod:sculk_block"
+    }
+  ],
+  "result": {
+    "item": "kurzemod:sculk_ingot",
+    "count": 9
+  }
+}
