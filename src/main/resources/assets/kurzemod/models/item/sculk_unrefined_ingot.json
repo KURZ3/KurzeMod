@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "kurzemod:item/sculk_unrefined_ingot"
+  }
+}
