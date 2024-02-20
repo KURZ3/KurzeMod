@@ -1,6 +1,7 @@
 package net.kurze.kurzemod;
 
 import com.mojang.logging.LogUtils;
+import net.kurze.kurzemod.block.ModBlocks;
 import net.kurze.kurzemod.item.ModCreativeModTabs;
 import net.kurze.kurzemod.item.ModItems;
 import net.minecraft.client.Minecraft;
@@ -47,6 +48,7 @@ public class KurzeMod
 
         ModCreativeModTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);

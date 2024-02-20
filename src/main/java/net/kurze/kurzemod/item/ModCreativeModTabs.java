@@ -1,6 +1,7 @@
 package net.kurze.kurzemod.item;
 
 import net.kurze.kurzemod.KurzeMod;
+import net.kurze.kurzemod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -19,8 +20,12 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.kurze_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         //Aqui se añaden los items en nuestra custom tab
+                        //Items
                         pOutput.accept(ModItems.SCULK_INGOT.get());
                         pOutput.accept(ModItems.SCULK_UNREFINED_INGOT.get());
+
+                        //Blocks
+                        pOutput.accept(ModBlocks.SCULK_BLOCK.get());
 
                     }).build());
 
