@@ -17,8 +17,9 @@ public class ModItems {
     //--
     public static final RegistryObject<Item> SCULK_UNREFINED_INGOT = ITEMS.register("sculk_unrefined_ingot",
             ()-> new Item(new Item.Properties()));
-
-
+    //-----------------------------ORES----------------
+    public static final RegistryObject<Item> SCULK_CLUSTER = ITEMS.register("sculk_cluster",
+            ()-> new Item(new Item.Properties()));
     //-----------------------------EventBus----------------
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
