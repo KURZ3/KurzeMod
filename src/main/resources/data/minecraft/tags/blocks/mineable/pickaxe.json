@@ -1,6 +1,8 @@
 {
   "values":
   [
-    "kurzemod:sculk_block"
+    "kurzemod:sculk_block",
+    "kurzemod:sculk_ore",
+    "kurzemod:sculk_deepslate_ore"
   ]
 }
