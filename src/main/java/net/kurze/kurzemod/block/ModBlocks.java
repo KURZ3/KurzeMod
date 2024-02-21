@@ -2,10 +2,12 @@ package net.kurze.kurzemod.block;
 
 import net.kurze.kurzemod.KurzeMod;
 import net.kurze.kurzemod.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,7 +24,14 @@ public class ModBlocks {
     //-----------------------------BLOQUES----------------
     public static final RegistryObject<Block> SCULK_BLOCK = registerBlock("sculk_block",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.BONE_BLOCK)));
+    //-----------------------------ORES----------------
+    public static final RegistryObject<Block> SCULK_DEEPSLATE_ORE = registerBlock("sculk_deepslate_ore",
+            ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS).sound(SoundType.AMETHYST_CLUSTER)
+                    .requiresCorrectToolForDrops(), UniformInt.of(5, 20)));
 
+    public static final RegistryObject<Block> SCULK_ORE = registerBlock("sculk_ore",
+            ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE).sound(SoundType.AMETHYST_CLUSTER)
+                    .requiresCorrectToolForDrops(), UniformInt.of(5, 10)));
 
 
 
