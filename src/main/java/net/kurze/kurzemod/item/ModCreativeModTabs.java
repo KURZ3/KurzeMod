@@ -25,9 +25,11 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.SCULK_UNREFINED_INGOT.get());
                         //Ores (item)
                         pOutput.accept(ModItems.SCULK_CLUSTER.get());
+                        pOutput.accept(ModItems.MONSOON_SHARD.get());
                         //Ores (vein)
                         pOutput.accept(ModBlocks.SCULK_DEEPSLATE_ORE.get());
                         pOutput.accept(ModBlocks.SCULK_ORE.get());
+                        pOutput.accept(ModBlocks.MONSOON_ORE.get());
 
                         //Blocks
                         pOutput.accept(ModBlocks.SCULK_BLOCK.get());

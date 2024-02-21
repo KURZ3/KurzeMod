@@ -2,6 +2,7 @@
   "item.kurzemod.sculk_ingot": "Sculk ingot",
   "item.kurzemod.sculk_unrefined_ingot": "Unrefined Sculk Ingot",
   "item.kurzemod.sculk_cluster": "Sculk Cluster",
+  "item.kurzemod.monsoon_shard": "Monsoon Shard",
 
 
   "block.kurzemod.sculk_block": "Sculk Block",
@@ -9,6 +10,7 @@
 
   "block.kurzemod.sculk_ore": "Sculk Ore",
   "block.kurzemod.sculk_deepslate_ore": "Sculk Deepslate Ore",
+  "block.kurzemod.monsoon_ore": "Monsoon Ore",
 
 
   "creativetab.kurze_tab": "Kurze Tab"

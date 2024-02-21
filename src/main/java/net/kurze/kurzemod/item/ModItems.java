@@ -20,6 +20,8 @@ public class ModItems {
     //-----------------------------ORES----------------
     public static final RegistryObject<Item> SCULK_CLUSTER = ITEMS.register("sculk_cluster",
             ()-> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MONSOON_SHARD = ITEMS.register("monsoon_shard",
+            ()-> new Item(new Item.Properties()));
     //-----------------------------EventBus----------------
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

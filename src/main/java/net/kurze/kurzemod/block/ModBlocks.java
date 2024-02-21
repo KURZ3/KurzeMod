@@ -33,9 +33,10 @@ public class ModBlocks {
             ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE).sound(SoundType.AMETHYST_CLUSTER)
                     .requiresCorrectToolForDrops(), UniformInt.of(5, 10)));
 
-
-
-
+    public static final RegistryObject<Block> MONSOON_ORE = registerBlock("monsoon_ore",
+            ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE).sound(SoundType.AMETHYST_CLUSTER)
+                    .requiresCorrectToolForDrops(), UniformInt.of(5, 10)));
+    
 
     //-----------------------------REGISTRO DE BLOQUES Y ITEMS----------------
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block){
