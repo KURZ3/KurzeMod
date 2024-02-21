@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "sculk",
+  "ingredient": {
+    "item": "kurzemod:sculk_cluster"
+  },
+  "result": "kurzemod:sculk_unrefined_ingot"
+}
