@@ -23,6 +23,8 @@ public class ModCreativeModTabs {
                         //Items
                         pOutput.accept(ModItems.SCULK_INGOT.get());
                         pOutput.accept(ModItems.SCULK_UNREFINED_INGOT.get());
+                        //Custom Items
+                        pOutput.accept(ModItems.METAL_DETECTOR.get());
                         //Ores (item)
                         pOutput.accept(ModItems.SCULK_CLUSTER.get());
                         pOutput.accept(ModItems.MONSOON_SHARD.get());

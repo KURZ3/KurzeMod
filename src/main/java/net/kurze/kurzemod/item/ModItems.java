@@ -1,6 +1,7 @@
 package net.kurze.kurzemod.item;
 
 import net.kurze.kurzemod.KurzeMod;
+import net.kurze.kurzemod.item.custom.MetalDetectorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -17,6 +18,9 @@ public class ModItems {
     //--
     public static final RegistryObject<Item> SCULK_UNREFINED_INGOT = ITEMS.register("sculk_unrefined_ingot",
             ()-> new Item(new Item.Properties()));
+    //-----------------------------CUSTOM ITEMS----------------
+    public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
+            () -> new MetalDetectorItem(new Item.Properties().durability(100)));
     //-----------------------------ORES----------------
     public static final RegistryObject<Item> SCULK_CLUSTER = ITEMS.register("sculk_cluster",
             ()-> new Item(new Item.Properties()));
