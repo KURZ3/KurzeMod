@@ -35,6 +35,7 @@ public class ModCreativeModTabs {
 
                         //Blocks
                         pOutput.accept(ModBlocks.SCULK_BLOCK.get());
+                        pOutput.accept(ModBlocks.SCULK_BRICKS.get());
 
                     }).build());
 
