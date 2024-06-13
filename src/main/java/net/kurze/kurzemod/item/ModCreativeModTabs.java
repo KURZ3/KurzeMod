@@ -37,6 +37,9 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.SCULK_BLOCK.get());
                         pOutput.accept(ModBlocks.SCULK_BRICKS.get());
 
+                        //Custom Blocks
+                        pOutput.accept(ModBlocks.SOUND_BLOCK.get());
+
                     }).build());
 
     //-----------------------------EventBus----------------

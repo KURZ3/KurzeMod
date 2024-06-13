@@ -1,6 +1,7 @@
 package net.kurze.kurzemod.block;
 
 import net.kurze.kurzemod.KurzeMod;
+import net.kurze.kurzemod.block.custom.SoundBlock;
 import net.kurze.kurzemod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -21,6 +22,11 @@ public class ModBlocks {
     //-----------------------------REGISTRO----------------
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, KurzeMod.MOD_ID);
+
+    //-----------------------------BLOQUES CUSTOM----------------
+    public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
+            ()-> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
     //-----------------------------BLOQUES----------------
     public static final RegistryObject<Block> SCULK_BLOCK = registerBlock("sculk_block",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.BONE_BLOCK)));
