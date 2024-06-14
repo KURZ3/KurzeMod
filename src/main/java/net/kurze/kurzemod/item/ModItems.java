@@ -21,7 +21,10 @@ public class ModItems {
     //-----------------------------CUSTOM ITEMS----------------
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties().durability(100)));
-    //-----------------------------ORES----------------
+    //-----------------------------COMIDAS----------------
+    public static final RegistryObject<Item> SUSHI = ITEMS.register("sushi",
+            () -> new Item(new Item.Properties().food(ModFoods.SUSHI)));
+    //-----------------------------ORES------------------
     public static final RegistryObject<Item> SCULK_CLUSTER = ITEMS.register("sculk_cluster",
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MONSOON_SHARD = ITEMS.register("monsoon_shard",

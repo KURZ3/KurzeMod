@@ -25,6 +25,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.SCULK_UNREFINED_INGOT.get());
                         //Custom Items
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
+                        //Custom Foods
+                        pOutput.accept(ModItems.SUSHI.get());
                         //Ores (item)
                         pOutput.accept(ModItems.SCULK_CLUSTER.get());
                         pOutput.accept(ModItems.MONSOON_SHARD.get());
