@@ -33,6 +33,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SCULK_BRICKS = registerBlock("sculk_bricks",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS).sound(SoundType.NETHER_BRICKS)));
+
+    public static final RegistryObject<Block> SCULK_DECO = registerBlock("sculk_deco",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR).sound(SoundType.SCULK_CATALYST)));
     //-----------------------------ORES----------------
     public static final RegistryObject<Block> SCULK_DEEPSLATE_ORE = registerBlock("sculk_deepslate_ore",
             ()-> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS).sound(SoundType.AMETHYST_CLUSTER)

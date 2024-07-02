@@ -2,6 +2,8 @@
   "values":
   [
     "kurzemod:sculk_block",
+    "kurzemod:sculk_bricks",
+    "kurzemod:sculk_deco",
     "kurzemod:sculk_ore",
     "kurzemod:monsoon_ore",
     "kurzemod:sculk_deepslate_ore"
