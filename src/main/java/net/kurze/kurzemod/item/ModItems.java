@@ -1,6 +1,7 @@
 package net.kurze.kurzemod.item;
 
 import net.kurze.kurzemod.KurzeMod;
+import net.kurze.kurzemod.item.custom.FuelItem;
 import net.kurze.kurzemod.item.custom.MetalDetectorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,7 +22,10 @@ public class ModItems {
     //-----------------------------CUSTOM ITEMS----------------
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties().durability(100)));
-    //-----------------------------COMIDAS----------------
+    //-----------------------------CUSTOM FUELS----------------
+    public static final RegistryObject<Item> SCULK_RESIDUE = ITEMS.register("sculk_residue",
+            ()-> new FuelItem(new Item.Properties(), 2400));
+    //-----------------------------COMIDAS---------------------
     public static final RegistryObject<Item> SUSHI = ITEMS.register("sushi",
             () -> new Item(new Item.Properties().food(ModFoods.SUSHI)));
     //-----------------------------ORES------------------
