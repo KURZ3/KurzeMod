@@ -50,13 +50,12 @@ public class SoundBlock extends Block {
 
         Creeper creeper = EntityType.CREEPER.create(pLevel);
         if (creeper != null) {
-            ServerBossEvent bossEvent = (ServerBossEvent)(new ServerBossEvent(Component.literal("VIDA DE DIOS"), BossEvent.BossBarColor.PURPLE, BossEvent.BossBarOverlay.PROGRESS)).setDarkenScreen(true);
             Vec3 vec3 = pPos.getCenter();
             creeper.moveTo(vec3.x(), vec3.y() + 2, vec3.z(), Mth.wrapDegrees(pLevel.random.nextFloat() * 360.0F), 0.0F);
             creeper.setHealth(200f);
             creeper.setCustomName(Component.literal("DiositoGOD"));
-            bossEvent.setVisible(true);
-            bossEvent.setProgress(creeper.getHealth()/ creeper.getMaxHealth());
+            creeper.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 100));
+            creeper.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1200, 100));
             pLevel.addFreshEntity(creeper);
         }
 
