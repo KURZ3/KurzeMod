@@ -1,5 +1,6 @@
 package net.kurze.kurzemod.block.custom;
 
+import com.google.common.collect.ImmutableMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerBossEvent;
@@ -16,7 +17,12 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Monster;
@@ -29,8 +35,12 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 
 import javax.annotation.Nullable;
+import java.lang.reflect.Modifier;
+import java.util.Map;
+import java.util.UUID;
 
 public class SoundBlock extends Block {
+
     public SoundBlock(Properties pProperties) {
         super(pProperties);
     }
@@ -39,43 +49,29 @@ public class SoundBlock extends Block {
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
 
-        pPlayer.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 60, 1)); //20 ticks es 1 seg
+        if(!pLevel.isClientSide()) {
+            pPlayer.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 60, 1)); //20 ticks es 1 seg
 
-        pLevel.playSound(pPlayer, pPos, SoundEvents.GHAST_HURT, SoundSource.HOSTILE, 15f, 1f);
+            pLevel.playSound(pPlayer, pPos, SoundEvents.GHAST_HURT, SoundSource.HOSTILE, 20f, 3.5f);
 
-        pPlayer.sendSystemMessage(Component.literal("The end is near..."));
-        double BlockX = pPos.getX();
-        double BlockY = pPos.getY();
-        double BlockZ = pPos.getZ();
+            Creeper creeper = EntityType.CREEPER.create(pLevel);
+            if (creeper != null) {
+                Vec3 vec3 = pPos.getCenter();
+                creeper.moveTo(vec3.x(), vec3.y() + 2, vec3.z(), Mth.wrapDegrees(pLevel.random.nextFloat() * 360.0F), 0.0F);
+                creeper.setCustomName(Component.literal("DiositoGOD"));
+                creeper.getAttribute(Attributes.MAX_HEALTH).setBaseValue(200d);
+                creeper.setHealth(200f);
+                pLevel.addFreshEntity(creeper);
+            }
 
-        Creeper creeper = EntityType.CREEPER.create(pLevel);
-        if (creeper != null) {
-            Vec3 vec3 = pPos.getCenter();
-            creeper.moveTo(vec3.x(), vec3.y() + 2, vec3.z(), Mth.wrapDegrees(pLevel.random.nextFloat() * 360.0F), 0.0F);
-            creeper.setHealth(200f);
-            creeper.setCustomName(Component.literal("DiositoGOD"));
-            creeper.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 100));
-            creeper.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1200, 100));
-            pLevel.addFreshEntity(creeper);
+            pPlayer.sendSystemMessage(Component.literal("The end is near..."));
         }
-
 
         return InteractionResult.SUCCESS;
     }
-
-    /* Añadir efectos al mob
-           creeper.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 100));
-            creeper.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1200, 100));
-    */
-
-
- /* Testeo para daño al pararte sobre el bloque
-    @Override
-    public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
-        super.stepOn(pLevel, pPos, pState, pEntity);
-        pEntity.hurt(pLevel.damageSources().magic(), 15);
-    }*/
-
-
 }
+
+
+
+
 
