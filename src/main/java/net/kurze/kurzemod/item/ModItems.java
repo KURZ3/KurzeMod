@@ -16,7 +16,6 @@ public class ModItems {
     //-----------------------------ITEMS----------------
     public static final RegistryObject<Item> SCULK_INGOT = ITEMS.register("sculk_ingot",
             ()-> new Item(new Item.Properties()));
-    //--
     public static final RegistryObject<Item> SCULK_UNREFINED_INGOT = ITEMS.register("sculk_unrefined_ingot",
             ()-> new Item(new Item.Properties()));
     //-----------------------------CUSTOM ITEMS----------------
