@@ -3,7 +3,10 @@ package net.kurze.kurzemod.item;
 import net.kurze.kurzemod.KurzeMod;
 import net.kurze.kurzemod.item.custom.FuelItem;
 import net.kurze.kurzemod.item.custom.MetalDetectorItem;
+import net.kurze.kurzemod.item.custom.ModToolTiers;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,6 +27,9 @@ public class ModItems {
     //-----------------------------CUSTOM FUELS----------------
     public static final RegistryObject<Item> SCULK_RESIDUE = ITEMS.register("sculk_residue",
             ()-> new FuelItem(new Item.Properties(), 2400));
+    //-----------------------------CUSTOM TOOLS----------------
+    public static final RegistryObject<Item> SCULKORD = ITEMS.register("sculkord",
+            ()-> new SwordItem(ModToolTiers.SCULK, 12, 3, new Item.Properties()));
     //-----------------------------COMIDAS---------------------
     public static final RegistryObject<Item> SUSHI = ITEMS.register("sushi",
             () -> new Item(new Item.Properties().food(ModFoods.SUSHI)));
