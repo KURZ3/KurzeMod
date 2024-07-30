@@ -23,8 +23,7 @@ public class ModCreativeModTabs {
                         //Items
                         pOutput.accept(ModItems.SCULK_INGOT.get());
                         pOutput.accept(ModItems.SCULK_UNREFINED_INGOT.get());
-                        //Custom Items
-                        pOutput.accept(ModItems.METAL_DETECTOR.get());
+
                         //Custom Fuels
                         pOutput.accept(ModItems.SCULK_RESIDUE.get());
                         //Custom Foods
@@ -44,7 +43,10 @@ public class ModCreativeModTabs {
 
                         //Custom Blocks
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
-
+                        //Custom Items
+                        pOutput.accept(ModItems.METAL_DETECTOR.get());
+                        //Custom Tools
+                        pOutput.accept(ModItems.SCULKORD.get());
                     }).build());
 
     //-----------------------------EventBus----------------
