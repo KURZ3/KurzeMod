@@ -29,7 +29,7 @@ public class ModItems {
             ()-> new FuelItem(new Item.Properties(), 2400));
     //-----------------------------CUSTOM TOOLS----------------
     public static final RegistryObject<Item> SCULKORD = ITEMS.register("sculkord",
-            ()-> new SwordItem(ModToolTiers.SCULK, 12, 3, new Item.Properties()));
+            ()-> new SwordItem(ModToolTiers.SCULK, 24, 3, new Item.Properties()));
     //-----------------------------COMIDAS---------------------
     public static final RegistryObject<Item> SUSHI = ITEMS.register("sushi",
             () -> new Item(new Item.Properties().food(ModFoods.SUSHI)));
