@@ -30,6 +30,9 @@ public class ModItems {
     //-----------------------------CUSTOM TOOLS----------------
     public static final RegistryObject<Item> SCULKORD = ITEMS.register("sculkord",
             ()-> new SwordItem(ModToolTiers.SCULK, 24, 3, new Item.Properties()));
+
+    public static final RegistryObject<Item> QUADSWORD = ITEMS.register("quadsword",
+            ()-> new SwordItem(ModToolTiers.SCULK, 48, 3, new Item.Properties()));
     //-----------------------------COMIDAS---------------------
     public static final RegistryObject<Item> SUSHI = ITEMS.register("sushi",
             () -> new Item(new Item.Properties().food(ModFoods.SUSHI)));

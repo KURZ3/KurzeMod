@@ -47,6 +47,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
                         //Custom Tools
                         pOutput.accept(ModItems.SCULKORD.get());
+                        pOutput.accept(ModItems.QUADSWORD.get());
                     }).build());
 
     //-----------------------------EventBus----------------
